@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info>
+    <mime-type type="application/ofd">
+        <_comment>Open Fixed-layout Document</_comment>
+        <glob pattern="*.ofd"/>
+        <sub-class-of type="application/zip"/>
+    </mime-type>
+</mime-info>
