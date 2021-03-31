@@ -1,2 +1,3 @@
-# tika-ofd
-Apache Tika parser of OFD files
+# OFD Parser
+
+OFD (Open Fixed-Format Document)
