@@ -3,7 +3,6 @@ package io.ryecrow.parser
 import io.ryecrow.parser.domain.OFDocument
 import io.ryecrow.parser.util.JAXBContexts
 import jakarta.xml.bind.JAXBContext
-import jakarta.xml.bind.JAXBException
 import jakarta.xml.bind.Unmarshaller
 import mu.KotlinLogging
 import org.apache.commons.compress.archivers.zip.ZipArchiveEntry
@@ -34,17 +33,9 @@ class OFDParser constructor(private val source: InputStream) {
     fun parse(): List<OFDocument> {
         val zip = ZipArchiveInputStream(source)
         var entry: ZipArchiveEntry? = zip.nextZipEntry
-        var ofDocument: OFDocument? = null
-        var parseException: Exception? = null
         while (entry != null) {
             when {
-                entry.name.equals("OFD.xml") -> {
-                    try {
-                        parseOFD(zip)
-                    } catch (e: Exception) {
-                        parseException = e
-                    }
-                }
+                entry.name.equals("OFD.xml") -> parseOFD(zip)
                 entry.name.endsWith("Document.xml") -> {
                     val document: OFDocument? = documents[entry.name]
                     if (document != null) {
@@ -54,19 +45,13 @@ class OFDParser constructor(private val source: InputStream) {
             }
             entry = zip.nextZipEntry
         }
-        return emptyList()
-//        return ofDocument ?: throw OFDException("Failed to parse OFD content", parseException)
+        return documents.values.toList()
     }
 
     private fun parseOFD(stream: InputStream) {
-        this.ofd = try {
             val jaxbContext: JAXBContext = JAXBContexts[OFD::class]
             val jaxbUnmarshaller: Unmarshaller = jaxbContext.createUnmarshaller()
-            jaxbUnmarshaller.unmarshal(stream) as OFD
-        } catch (e: JAXBException) {
-            log.warn(e) { "Failed to unmarshall OFD.xml" }
-            throw e
-        }
+        this.ofd = jaxbUnmarshaller.unmarshal(stream) as OFD
 
         ofd?.docBody?.forEach { docBody ->
             if ((docBody.docRoot != null) && (docBody.docInfo != null)) {

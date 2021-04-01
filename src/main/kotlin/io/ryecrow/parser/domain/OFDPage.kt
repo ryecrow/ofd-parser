@@ -6,5 +6,7 @@ package io.ryecrow.parser.domain
  * @author Rene Fang
  * @version 1.0
  */
-class OFDPage {
-}
+data class OFDPage(
+    var textContent: String,
+    var nonTextObjects: List<Any>
+)
