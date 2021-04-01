@@ -38,7 +38,13 @@ class OFDParser constructor(private val source: InputStream) {
         var parseException: Exception? = null
         while (entry != null) {
             when {
-                entry.name.equals("OFD.xml") -> parseOFD(zip)
+                entry.name.equals("OFD.xml") -> {
+                    try {
+                        parseOFD(zip)
+                    } catch (e: Exception) {
+                        parseException = e
+                    }
+                }
                 entry.name.endsWith("Document.xml") -> {
                     val document: OFDocument? = documents[entry.name]
                     if (document != null) {
@@ -59,7 +65,7 @@ class OFDParser constructor(private val source: InputStream) {
             jaxbUnmarshaller.unmarshal(stream) as OFD
         } catch (e: JAXBException) {
             log.warn(e) { "Failed to unmarshall OFD.xml" }
-            null
+            throw e
         }
 
         ofd?.docBody?.forEach { docBody ->
