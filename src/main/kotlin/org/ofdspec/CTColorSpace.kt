@@ -15,7 +15,7 @@ open class CTColorSpace {
     var type: String? = null
 
     @XmlAttribute(name = "BitsPerComponent")
-    protected var bitsPerComponent: Int? = null
+    var bitsPerComponent: Int? = null
         get() = field ?: 8
 
     @XmlAttribute(name = "Profile")
@@ -25,7 +25,7 @@ open class CTColorSpace {
     @XmlType(name = "", propOrder = ["cv"])
     class Palette {
         @XmlElement(name = "CV", required = true)
-        protected var cv: List<String>? = null
+        var cv: List<String>? = null
 
         val cV: List<String>?
             get() {

@@ -43,7 +43,7 @@ class CTPermission {
         var printable = false
 
         @XmlAttribute(name = "Copies")
-        protected var copies: Int = -1
+        var copies: Int = -1
     }
 
 

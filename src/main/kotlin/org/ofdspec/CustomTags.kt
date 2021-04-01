@@ -9,7 +9,7 @@ import java.util.*
 class CustomTags {
 
     @XmlElement(name = "CustomTag")
-    protected var customTag: List<CustomTag>? = null
+    var customTag: List<CustomTag>? = null
         get() {
             if (field == null) {
                 field = ArrayList()

@@ -7,7 +7,7 @@ import jakarta.xml.bind.annotation.*
 class CTClip {
 
     @XmlElement(name = "Area", required = true)
-    protected var area: List<Area>? = null
+    var area: List<Area>? = null
         get() {
             if (field == null) {
                 field = ArrayList()

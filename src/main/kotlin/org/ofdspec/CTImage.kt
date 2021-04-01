@@ -30,16 +30,16 @@ open class CTImage : CTGraphicUnit() {
         var borderColor: CTColor? = null
 
         @XmlAttribute(name = "LineWidth")
-        protected var lineWidth: Double = 0.353
+        var lineWidth: Double = 0.353
 
         @XmlAttribute(name = "HorizonalCornerRadius")
-        protected var horizonalCornerRadius: Double = 0.0
+        var horizonalCornerRadius: Double = 0.0
 
         @XmlAttribute(name = "VerticalCornerRadius")
-        protected var verticalCornerRadius: Double = 0.0
+        var verticalCornerRadius: Double = 0.0
 
         @XmlAttribute(name = "DashOffset")
-        protected var dashOffset: Double = 0.0
+        var dashOffset: Double = 0.0
 
 
         @XmlAttribute(name = "DashPattern")

@@ -8,7 +8,7 @@ import jakarta.xml.bind.annotation.*
 class Attachments {
 
     @XmlElement(name = "Attachment")
-    protected var attachment: List<CTAttachment>? = null
+    var attachment: List<CTAttachment>? = null
         get() {
             if (field == null) {
                 field = ArrayList()

@@ -8,7 +8,7 @@ import java.util.*
 @XmlRootElement(name = "Page")
 class Page {
     @XmlElement(name = "Template")
-    protected var template: List<Template>? = null
+    var template: List<Template>? = null
         get() {
             if (field == null) {
                 field = ArrayList()
@@ -18,7 +18,7 @@ class Page {
 
     @XmlElement(name = "PageRes")
     @XmlSchemaType(name = "anyURI")
-    protected var pageRes: List<String>? = null
+    var pageRes: List<String>? = null
         get() {
             if (field == null) {
                 field = ArrayList()
@@ -39,7 +39,7 @@ class Page {
     @XmlType(name = "", propOrder = ["action"])
     class Actions {
         @XmlElement(name = "Action", required = true)
-        protected var action: List<CTAction>? = null
+        var action: List<CTAction>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -52,7 +52,7 @@ class Page {
     @XmlType(name = "", propOrder = ["layer"])
     class Content {
         @XmlElement(name = "Layer", required = true)
-        protected var layer: List<Layer>? = null
+        var layer: List<Layer>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -78,7 +78,7 @@ class Page {
         var templateID: Long = 0
 
         @XmlAttribute(name = "ZOrder")
-        protected var zOrder: String? = null
+        var zOrder: String? = null
             get() = field ?: "Background"
     }
 }

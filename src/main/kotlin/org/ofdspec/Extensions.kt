@@ -8,7 +8,7 @@ import java.util.*
 @XmlRootElement(name = "Extensions")
 class Extensions {
     @XmlElement(name = "Extension", required = true)
-    protected var extension: List<CTExtension>? = null
+    var extension: List<CTExtension>? = null
         get() {
             if (field == null) {
                 field = ArrayList()

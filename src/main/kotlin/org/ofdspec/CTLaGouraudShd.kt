@@ -8,7 +8,7 @@ import java.util.*
 class CTLaGouraudShd {
 
     @XmlElement(name = "Point", required = true)
-    protected var point: List<Point>? = null
+    var point: List<Point>? = null
         get() {
             if (field == null) {
                 field = ArrayList()

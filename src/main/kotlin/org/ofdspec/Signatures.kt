@@ -17,7 +17,7 @@ class Signatures {
     var maxSignId: String? = null
 
     @XmlElement(name = "Signature")
-    protected var signature: List<Signature>? = null
+    var signature: List<Signature>? = null
         get() {
             if (field == null) {
                 field = ArrayList()
@@ -37,7 +37,7 @@ class Signatures {
         var id: String? = null
 
         @XmlAttribute(name = "Type")
-        protected var type: String? = null
+        var type: String? = null
             get() = field ?: "Seal"
 
         @XmlAttribute(name = "BaseLoc", required = true)

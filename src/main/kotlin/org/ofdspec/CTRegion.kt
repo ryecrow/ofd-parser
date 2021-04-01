@@ -7,7 +7,7 @@ import java.util.*
 @XmlType(name = "CT_Region", propOrder = ["area"])
 class CTRegion {
     @XmlElement(name = "Area", required = true)
-    protected var area: List<Area>? = null
+    var area: List<Area>? = null
         get() {
             if (field == null) {
                 field = ArrayList()
@@ -28,7 +28,7 @@ class CTRegion {
             XmlElement(name = "Arc", type = Arc::class),
             XmlElement(name = "Close")
         )
-        protected var moveOrLineOrQuadraticBezier: List<Any>? = null
+        var moveOrLineOrQuadraticBezier: List<Any>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()

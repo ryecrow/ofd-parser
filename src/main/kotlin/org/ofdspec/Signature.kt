@@ -37,7 +37,7 @@ class Signature {
         var references: References? = null
 
         @XmlElement(name = "StampAnnot")
-        protected var stampAnnot: List<StampAnnot>? = null
+        var stampAnnot: List<StampAnnot>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -66,7 +66,7 @@ class Signature {
         @XmlType(name = "", propOrder = ["reference"])
         class References {
             @XmlElement(name = "Reference", required = true)
-            protected var reference: List<Reference>? = null
+            var reference: List<Reference>? = null
                 get() {
                     if (field == null) {
                         field = ArrayList()
@@ -75,7 +75,7 @@ class Signature {
                 }
 
             @XmlAttribute(name = "CheckMethod")
-            protected var checkMethod: String? = null
+            var checkMethod: String? = null
                 get() = field ?: "MD5"
 
             @XmlAccessorType(XmlAccessType.FIELD)

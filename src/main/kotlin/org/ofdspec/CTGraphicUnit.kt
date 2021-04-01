@@ -24,7 +24,7 @@ abstract class CTGraphicUnit {
     var name: String? = null
 
     @XmlAttribute(name = "Visible")
-    protected var visible: Boolean? = null
+    var visible: Boolean? = null
         get() = field ?: true
 
 
@@ -36,30 +36,30 @@ abstract class CTGraphicUnit {
     var drawParam: Long? = null
 
     @XmlAttribute(name = "LineWidth")
-    protected var lineWidth: Double? = null
+    var lineWidth: Double? = null
         get() = field ?: 0.353
 
     @XmlAttribute(name = "Cap")
-    protected var cap: String? = null
+    var cap: String? = null
         get() = field ?: "Butt"
 
     @XmlAttribute(name = "Join")
-    protected var join: String? = null
+    var join: String? = null
         get() = field ?: "Miter"
 
     @XmlAttribute(name = "MiterLimit")
-    protected var miterLimit: Double? = null
+    var miterLimit: Double? = null
         get() = field ?: 4.234
 
     @XmlAttribute(name = "DashOffset")
-    protected var dashOffset: Double? = null
+    var dashOffset: Double? = null
         get() = field ?: 0.0
 
     @XmlAttribute(name = "DashPattern")
     var dashPattern: String? = null
 
     @XmlAttribute(name = "Alpha")
-    protected var alpha: Int? = null
+    var alpha: Int? = null
         get() = field ?: 255
 
 
@@ -68,7 +68,7 @@ abstract class CTGraphicUnit {
     class Actions {
 
         @XmlElement(name = "Action", required = true)
-        protected var action: List<CTAction>? = null
+        var action: List<CTAction>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -82,7 +82,7 @@ abstract class CTGraphicUnit {
     @XmlType(name = "", propOrder = ["clip"])
     class Clips {
         @XmlElement(name = "Clip", required = true)
-        protected var clip: List<CTClip>? = null
+        var clip: List<CTClip>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()

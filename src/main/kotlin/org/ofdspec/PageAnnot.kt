@@ -10,7 +10,7 @@ import javax.xml.datatype.XMLGregorianCalendar
 @XmlRootElement(name = "PageAnnot")
 class PageAnnot {
     @XmlElement(name = "Annot", required = true)
-    protected var annot: List<Annot>? = null
+    var annot: List<Annot>? = null
         get() {
             if (field == null) {
                 field = ArrayList()
@@ -45,22 +45,22 @@ class PageAnnot {
         var lastModDate: XMLGregorianCalendar? = null
 
         @XmlAttribute(name = "Visible")
-        protected var visible: Boolean = true
+        var visible: Boolean = true
 
         @XmlAttribute(name = "Subtype")
         var subtype: String? = null
 
         @XmlAttribute(name = "Print")
-        protected var print: Boolean = true
+        var print: Boolean = true
 
         @XmlAttribute(name = "NoZoom")
-        protected var noZoom: Boolean = false
+        var noZoom: Boolean = false
 
         @XmlAttribute(name = "NoRotate")
-        protected var noRotate: Boolean = false
+        var noRotate: Boolean = false
 
         @XmlAttribute(name = "ReadOnly")
-        protected var readOnly: Boolean? = null
+        var readOnly: Boolean? = null
             get() = field ?: true
 
 
@@ -77,7 +77,7 @@ class PageAnnot {
         @XmlType(name = "", propOrder = ["parameter"])
         class Parameters {
             @XmlElement(name = "Parameter", required = true)
-            protected var parameter: List<Parameter>? = null
+            var parameter: List<Parameter>? = null
                 get() {
                     if (field == null) {
                         field = ArrayList()

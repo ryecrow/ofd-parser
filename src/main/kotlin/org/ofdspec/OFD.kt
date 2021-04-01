@@ -48,7 +48,7 @@ class OFD {
         @XmlType(name = "", propOrder = ["version"])
         class Versions {
             @XmlElement(name = "Version", required = true)
-            protected var version: List<Version>? = null
+            var version: List<Version>? = null
                 get() {
                     if (field == null) {
                         field = ArrayList()
@@ -70,7 +70,7 @@ class OFD {
                 var index = 0
 
                 @XmlAttribute(name = "Current")
-                protected var current: Boolean = false
+                var current: Boolean = false
 
                 @XmlAttribute(name = "BaseLoc", required = true)
                 var baseLoc: String? = null

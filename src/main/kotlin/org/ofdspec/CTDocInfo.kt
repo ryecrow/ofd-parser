@@ -57,7 +57,7 @@ class CTDocInfo {
     @XmlType(name = "", propOrder = ["customData"])
     class CustomDatas {
         @XmlElement(name = "CustomData", required = true)
-        protected var customData: List<CustomData>? = null
+        var customData: List<CustomData>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -82,7 +82,7 @@ class CTDocInfo {
     @XmlType(name = "", propOrder = ["keyword"])
     class Keywords {
         @XmlElement(name = "Keyword", required = true)
-        protected var keyword: List<String>? = null
+        var keyword: List<String>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()

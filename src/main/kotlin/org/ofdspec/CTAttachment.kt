@@ -37,10 +37,10 @@ class CTAttachment {
     var size: Double? = null
 
     @XmlAttribute(name = "Visible")
-    protected var visible: Boolean? = null
+    var visible: Boolean? = null
         get() = field ?: true
 
     @XmlAttribute(name = "Usage")
-    protected var usage: String? = null
+    var usage: String? = null
         get() = field ?: "none"
 }

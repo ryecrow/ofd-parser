@@ -21,14 +21,14 @@ open class CTPath : CTGraphicUnit() {
     var abbreviatedData: String? = null
 
     @XmlAttribute(name = "Stroke")
-    protected var stroke: Boolean? = null
+    var stroke: Boolean? = null
         get() = field ?: true
 
     @XmlAttribute(name = "Fill")
-    protected var fill: Boolean? = null
+    var fill: Boolean? = null
         get() = field ?: false
 
     @XmlAttribute(name = "Rule")
-    protected var rule: String? = null
+    var rule: String? = null
         get() = field ?: "NonZero"
 }

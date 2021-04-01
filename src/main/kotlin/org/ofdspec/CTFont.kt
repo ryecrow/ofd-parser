@@ -21,22 +21,22 @@ open class CTFont {
     var familyName: String? = null
 
     @XmlAttribute(name = "Charset")
-    protected var charset: String? = null
+    var charset: String? = null
         get() = field ?: "unicode"
 
     @XmlAttribute(name = "Italic")
-    protected var italic: Boolean? = null
+    var italic: Boolean? = null
         get() = field ?: false
 
     @XmlAttribute(name = "Bold")
-    protected var bold: Boolean? = null
+    var bold: Boolean? = null
         get() = field ?: false
 
     @XmlAttribute(name = "Serif")
-    protected var serif: Boolean? = null
+    var serif: Boolean? = null
         get() = field ?: false
 
     @XmlAttribute(name = "FixedWidth")
-    protected var fixedWidth: Boolean? = null
+    var fixedWidth: Boolean? = null
         get() = field ?: false
 }

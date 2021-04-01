@@ -20,19 +20,19 @@ open class CTDrawParam {
     var relative: Long? = null
 
     @XmlAttribute(name = "LineWidth")
-    protected var lineWidth: Double? = null
+    var lineWidth: Double? = null
         get() = field ?: 0.353
 
     @XmlAttribute(name = "Join")
-    protected var join: String? = null
+    var join: String? = null
         get() = field ?: "Miter"
 
     @XmlAttribute(name = "Cap")
-    protected var cap: String? = null
+    var cap: String? = null
         get() = field ?: "Butt"
 
     @XmlAttribute(name = "DashOffset")
-    protected var dashOffset: Double? = null
+    var dashOffset: Double? = null
         get() = field ?: 0.0
 
 
@@ -40,6 +40,6 @@ open class CTDrawParam {
     var dashPattern: String? = null
 
     @XmlAttribute(name = "MiterLimit")
-    protected var miterLimit: Double? = null
+    var miterLimit: Double? = null
         get() = field ?: 4.234
 }

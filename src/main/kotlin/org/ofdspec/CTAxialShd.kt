@@ -7,7 +7,7 @@ import jakarta.xml.bind.annotation.*
 class CTAxialShd {
 
     @XmlElement(name = "Segment", required = true)
-    protected var segment: List<Segment>? = null
+    var segment: List<Segment>? = null
         get() {
             if (field == null) {
                 field = ArrayList()
@@ -16,14 +16,14 @@ class CTAxialShd {
         }
 
     @XmlAttribute(name = "MapType")
-    protected var mapType: String? = null
+    var mapType: String? = null
         get() = field ?: "Direct"
 
     @XmlAttribute(name = "MapUnit")
     var mapUnit: Double? = null
 
     @XmlAttribute(name = "Extend")
-    protected var extend: Int? = null
+    var extend: Int? = null
         get() = field ?: 0
 
     @XmlAttribute(name = "StartPoint", required = true)

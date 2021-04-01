@@ -14,7 +14,7 @@ class Res {
         XmlElement(name = "MultiMedias", type = MultiMedias::class),
         XmlElement(name = "CompositeGraphicUnits", type = CompositeGraphicUnits::class)
     )
-    protected var colorSpacesOrDrawParamsOrFonts: List<Any>? = null
+    var colorSpacesOrDrawParamsOrFonts: List<Any>? = null
         get() {
             if (field == null) {
                 field = ArrayList()
@@ -29,7 +29,7 @@ class Res {
     @XmlType(name = "", propOrder = ["colorSpace"])
     class ColorSpaces {
         @XmlElement(name = "ColorSpace", required = true)
-        protected var colorSpace: List<ColorSpace>? = null
+        var colorSpace: List<ColorSpace>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -50,7 +50,7 @@ class Res {
     @XmlType(name = "", propOrder = ["compositeGraphicUnit"])
     class CompositeGraphicUnits {
         @XmlElement(name = "CompositeGraphicUnit", required = true)
-        protected var compositeGraphicUnit: List<CompositeGraphicUnit>? = null
+        var compositeGraphicUnit: List<CompositeGraphicUnit>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -72,7 +72,7 @@ class Res {
     @XmlType(name = "", propOrder = ["drawParam"])
     class DrawParams {
         @XmlElement(name = "DrawParam", required = true)
-        protected var drawParam: List<DrawParam>? = null
+        var drawParam: List<DrawParam>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -93,7 +93,7 @@ class Res {
     @XmlType(name = "", propOrder = ["font"])
     class Fonts {
         @XmlElement(name = "Font", required = true)
-        protected var font: List<Font>? = null
+        var font: List<Font>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -115,7 +115,7 @@ class Res {
     @XmlType(name = "", propOrder = ["multiMedia"])
     class MultiMedias {
         @XmlElement(name = "MultiMedia", required = true)
-        protected var multiMedia: List<MultiMedia>? = null
+        var multiMedia: List<MultiMedia>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()

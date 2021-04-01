@@ -31,6 +31,6 @@ class CTColor {
     var colorSpace: Long? = null
 
     @XmlAttribute(name = "Alpha")
-    protected var alpha: Int? = null
+    var alpha: Int? = null
         get() = field ?: 255
 }

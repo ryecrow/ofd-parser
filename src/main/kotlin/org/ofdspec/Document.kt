@@ -52,7 +52,7 @@ class Document {
     @XmlType(name = "", propOrder = ["action"])
     class Actions {
         @XmlElement(name = "Action", required = true)
-        protected var action: List<CTAction>? = null
+        var action: List<CTAction>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -65,7 +65,7 @@ class Document {
     @XmlType(name = "", propOrder = ["bookmark"])
     class Bookmarks {
         @XmlElement(name = "Bookmark", required = true)
-        protected var bookmark: List<CTBookmark>? = null
+        var bookmark: List<CTBookmark>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -87,7 +87,7 @@ class Document {
 
         @XmlElement(name = "PublicRes")
         @XmlSchemaType(name = "anyURI")
-        protected var publicRes: List<String>? = null
+        var publicRes: List<String>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -97,7 +97,7 @@ class Document {
 
         @XmlElement(name = "DocumentRes")
         @XmlSchemaType(name = "anyURI")
-        protected var documentRes: List<String>? = null
+        var documentRes: List<String>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -106,7 +106,7 @@ class Document {
             }
 
         @XmlElement(name = "TemplatePage")
-        protected var templatePage: List<TemplatePage>? = null
+        var templatePage: List<TemplatePage>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -141,7 +141,7 @@ class Document {
     @XmlType(name = "", propOrder = ["outlineElem"])
     class Outlines {
         @XmlElement(name = "OutlineElem", required = true)
-        protected var outlineElem: List<CTOutlineElem>? = null
+        var outlineElem: List<CTOutlineElem>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()
@@ -154,7 +154,7 @@ class Document {
     @XmlType(name = "", propOrder = ["page"])
     class Pages {
         @XmlElement(name = "Page", required = true)
-        protected var page: List<Page>? = null
+        var page: List<Page>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()

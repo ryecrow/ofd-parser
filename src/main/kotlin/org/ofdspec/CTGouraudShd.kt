@@ -7,7 +7,7 @@ import java.util.*
 @XmlType(name = "CT_GouraudShd", propOrder = ["point", "backColor"])
 class CTGouraudShd {
     @XmlElement(name = "Point", required = true)
-    protected var point: List<Point>? = null
+    var point: List<Point>? = null
         get() {
             if (field == null) {
                 field = ArrayList()

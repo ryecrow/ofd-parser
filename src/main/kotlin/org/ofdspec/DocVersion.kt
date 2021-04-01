@@ -38,7 +38,7 @@ class DocVersion {
     @XmlType(name = "", propOrder = ["file"])
     class FileList {
         @XmlElement(name = "File", required = true)
-        protected var file: List<File>? = null
+        var file: List<File>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()

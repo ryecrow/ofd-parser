@@ -13,7 +13,7 @@ class CTExtension {
         XmlElement(name = "Data"),
         XmlElement(name = "ExtendData", type = String::class)
     )
-    protected var propertyOrDataOrExtendData: List<Any>? = null
+    var propertyOrDataOrExtendData: List<Any>? = null
         get() {
             if (field == null) {
                 field = ArrayList()

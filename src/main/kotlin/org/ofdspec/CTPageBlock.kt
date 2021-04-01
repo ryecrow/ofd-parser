@@ -21,7 +21,7 @@ open class CTPageBlock {
         XmlElement(name = "CompositeObject", type = CompositeObject::class),
         XmlElement(name = "PageBlock", type = PageBlock::class)
     )
-    protected var textObjectOrPathObjectOrImageObject: List<Any>? = null
+    var textObjectOrPathObjectOrImageObject: List<Any>? = null
         get() {
             if (field == null) {
                 field = ArrayList()

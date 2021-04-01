@@ -21,7 +21,7 @@ open class CTText : CTGraphicUnit() {
         XmlElement(name = "CGTransform", required = true, type = CTCGTransform::class),
         XmlElement(name = "TextCode", required = true, type = TextCode::class)
     )
-    protected var cgTransformAndTextCode: List<Any>? = null
+    var cgTransformAndTextCode: List<Any>? = null
 
     @XmlAttribute(name = "Font", required = true)
     var font: Long = 0
@@ -30,25 +30,25 @@ open class CTText : CTGraphicUnit() {
     var size = 0.0
 
     @XmlAttribute(name = "Stroke")
-    protected var stroke: Boolean = false
+    var stroke: Boolean = false
 
     @XmlAttribute(name = "Fill")
-    protected var fill: Boolean = true
+    var fill: Boolean = true
 
     @XmlAttribute(name = "HScale")
-    protected var hScale: Double = 1.0
+    var hScale: Double = 1.0
 
     @XmlAttribute(name = "ReadDirection")
-    protected var readDirection: Int = 0
+    var readDirection: Int = 0
 
     @XmlAttribute(name = "CharDirection")
-    protected var charDirection: Int = 0
+    var charDirection: Int = 0
 
     @XmlAttribute(name = "Weight")
-    protected var weight: Int = 400
+    var weight: Int = 400
 
     @XmlAttribute(name = "Italic")
-    protected var italic: Boolean = false
+    var italic: Boolean = false
 
 
     val cGTransformAndTextCode: List<Any>?

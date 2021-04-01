@@ -23,11 +23,11 @@ class CTPattern {
     var yStep: Double? = null
 
     @XmlAttribute(name = "ReflectMethod")
-    protected var reflectMethod: String? = null
+    var reflectMethod: String? = null
         get() = field ?: "Normal"
 
     @XmlAttribute(name = "RelativeTo")
-    protected var relativeTo: String? = null
+    var relativeTo: String? = null
         get() = field ?: "Object"
 
     @XmlAttribute(name = "CTM")

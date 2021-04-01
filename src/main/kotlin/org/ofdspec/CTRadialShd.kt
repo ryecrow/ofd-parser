@@ -8,7 +8,7 @@ import java.util.*
 class CTRadialShd {
 
     @XmlElement(name = "Segment", required = true)
-    protected var segment: List<Segment>? = null
+    var segment: List<Segment>? = null
         get() {
             if (field == null) {
                 field = ArrayList()
@@ -17,23 +17,23 @@ class CTRadialShd {
         }
 
     @XmlAttribute(name = "MapType")
-    protected var mapType: String? = null
+    var mapType: String? = null
         get() = field ?: "Direct"
 
     @XmlAttribute(name = "MapUnit")
     var mapUnit: Double? = null
 
     @XmlAttribute(name = "Eccentricity")
-    protected var eccentricity: Double = 0.0
+    var eccentricity: Double = 0.0
 
     @XmlAttribute(name = "Angle")
-    protected var angle: Double = 0.0
+    var angle: Double = 0.0
 
     @XmlAttribute(name = "StartPoint", required = true)
     var startPoint: String? = null
 
     @XmlAttribute(name = "StartRadius")
-    protected var startRadius: Double = 0.0
+    var startRadius: Double = 0.0
 
     @XmlAttribute(name = "EndPoint", required = true)
     var endPoint: String? = null
@@ -42,7 +42,7 @@ class CTRadialShd {
     var endRadius = 0.0
 
     @XmlAttribute(name = "Extend")
-    protected var extend: Int? = 0
+    var extend: Int? = 0
 
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = ["color"])

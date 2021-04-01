@@ -9,7 +9,7 @@ import org.ofdspec.Page.Content.Layer
 @XmlSeeAlso(Layer::class)
 open class CTLayer : CTPageBlock() {
     @XmlAttribute(name = "Type")
-    protected var type: String? = null
+    var type: String? = null
         get() = field ?: "Body"
 
 

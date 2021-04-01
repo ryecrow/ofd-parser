@@ -11,7 +11,7 @@ class CTOutlineElem {
     var actions: Actions? = null
 
     @XmlElement(name = "OutlineElem")
-    protected var outlineElem: List<CTOutlineElem>? = null
+    var outlineElem: List<CTOutlineElem>? = null
         get() {
             if (field == null) {
                 field = ArrayList()
@@ -26,7 +26,7 @@ class CTOutlineElem {
     var count: Int? = null
 
     @XmlAttribute(name = "Expanded")
-    protected var expanded: Boolean? = null
+    var expanded: Boolean? = null
         get() = field ?: true
 
 
@@ -34,7 +34,7 @@ class CTOutlineElem {
     @XmlType(name = "", propOrder = ["action"])
     class Actions {
         @XmlElement(name = "Action", required = true)
-        protected var action: List<CTAction>? = null
+        var action: List<CTAction>? = null
             get() {
                 if (field == null) {
                     field = ArrayList()

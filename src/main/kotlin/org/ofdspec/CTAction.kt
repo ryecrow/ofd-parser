@@ -56,7 +56,7 @@ class CTAction {
         var attachID: Any? = null
 
         @XmlAttribute(name = "NewWindow")
-        protected var newWindow: Boolean? = null
+        var newWindow: Boolean? = null
             get() = field ?: true
     }
 
@@ -68,7 +68,7 @@ class CTAction {
         var resourceID: Long = 0
 
         @XmlAttribute(name = "Operator")
-        protected var operator: String? = null
+        var operator: String? = null
             get() = field ?: "Play"
     }
 
