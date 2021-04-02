@@ -22,6 +22,12 @@ open class CTText : CTGraphicUnit() {
         XmlElement(name = "TextCode", required = true, type = TextCode::class)
     )
     var cgTransformAndTextCode: List<Any>? = null
+        get() {
+            if (field == null) {
+                field = ArrayList()
+            }
+            return field
+        }
 
     @XmlAttribute(name = "Font", required = true)
     var font: Long = 0
@@ -49,15 +55,6 @@ open class CTText : CTGraphicUnit() {
 
     @XmlAttribute(name = "Italic")
     var italic: Boolean = false
-
-
-    val cGTransformAndTextCode: List<Any>?
-        get() {
-            if (cgTransformAndTextCode == null) {
-                cgTransformAndTextCode = ArrayList()
-            }
-            return cgTransformAndTextCode
-        }
 
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = ["value"])

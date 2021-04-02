@@ -27,10 +27,8 @@ abstract class CTGraphicUnit {
     var visible: Boolean? = null
         get() = field ?: true
 
-
     @XmlAttribute(name = "CTM")
-    var cTM: String? = null
-
+    var ctm: String? = null
 
     @XmlAttribute(name = "DrawParam")
     var drawParam: Long? = null
