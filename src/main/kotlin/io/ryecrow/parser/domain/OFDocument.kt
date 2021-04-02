@@ -9,25 +9,27 @@ import java.util.*
  * @author Rene Fang
  * @version 1.0
  */
-class OFDocument constructor(private val docInfo: CTDocInfo) {
+class OFDocument {
+
+    var docInfo: CTDocInfo? = null
 
     var pages: List<OFDPage> = emptyList()
 
     val title: String?
-        get() = docInfo.title
+        get() = docInfo?.title
 
     val author: String?
-        get() = docInfo.author
+        get() = docInfo?.author
 
     val abstract: String?
-        get() = docInfo.abstract
+        get() = docInfo?.abstract
 
     val creator: String?
-        get() = docInfo.creator
+        get() = docInfo?.creator
 
     val creationDate: Date?
-        get() = docInfo.creationDate?.toGregorianCalendar()?.time
+        get() = docInfo?.creationDate?.toGregorianCalendar()?.time
 
     val keywords: List<String>
-        get() = docInfo.keywords?.keyword ?: emptyList()
+        get() = docInfo?.keywords?.keyword ?: emptyList()
 }

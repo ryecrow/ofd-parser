@@ -7,6 +7,9 @@ package io.ryecrow.parser.domain
  * @version 1.0
  */
 data class OFDPage(
-    var textContent: String,
-    var nonTextObjects: List<Any>
+    var text: String,
+    var paths: List<Any>,
+    var images: List<Any>,
+    var blocks: List<Any>,
+    var compositeObjects: List<Any>
 )
